@@ -1,5 +1,12 @@
 <template>
     <div>
       Hello {greeting} LWC
+      <br>
     </div>
+    <lightning-card  title="Two way data binding">
+      <div class="slds-m-around_medium">
+        <lightning-input type="text" label="Label" onkeyup={inputHandler} value={title}></lightning-input>
+        <p>{title}</p>
+      </div>
+    </lightning-card>
 </template>
