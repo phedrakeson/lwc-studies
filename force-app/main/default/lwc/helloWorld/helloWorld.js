@@ -12,6 +12,10 @@ export default class HelloWorld extends LightningElement {
 
   @track list = ['a', 'b', 'c'];
 
+  get firstItem() {
+    return this.list[0].toUpperCase();
+  }
+
   inputHandler(event) {
     this.title = event.target.value;
   }
