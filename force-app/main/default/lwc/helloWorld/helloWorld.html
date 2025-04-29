@@ -9,4 +9,13 @@
         <p>{title}</p>
       </div>
     </lightning-card>
+
+    <section class="slds-m-top_medium">
+      <lightning-card  title="@track properties">
+        <div class="slds-m-around_medium">
+          <lightning-input type="text" label="Enter your city name" onkeyup={trackHandler} value={address.city}></lightning-input>
+          <p>{address.city} is where I live.</p>
+        </div>
+      </lightning-card>
+    </section>
 </template>
