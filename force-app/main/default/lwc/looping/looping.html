@@ -10,20 +10,20 @@
     </lightning-card>
     <lightning-card title="iterator loop">
       <div class="slds-var-p-around_medium">
+        <ul class="slds-has-dividers_around-space">
           <template iterator:ceo={ceoList}>
-              <ul key={ceo.value.id} class="slds-has-dividers_around-space">
                 <template if:true={ceo.first}>
-                  <strong>List of top companies and CEOs</strong>
+                  <strong key={ceo.value.id} >List of top companies and CEOs</strong>
                 </template>
-                <li class="slds-item">
+                <li key={ceo.value.id}  class="slds-item">
                   <strong>{ceo.value.company} </strong>
                   {ceo.value.name}
                 </li>
                 <template if:true={ceo.last}>
-                  <strong>Thanks for reading the list</strong>
+                  <strong key={ceo.value.id} >Thanks for reading the list</strong>
                 </template>
-              </ul>
-          </template>
+            </template>
+          </ul>
         </div>
   </lightning-card>
 </template>
