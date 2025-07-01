@@ -18,4 +18,8 @@ export default class P2cParent extends LightningElement {
       href: "https://www.google.com"
     }
   ]
+
+  handleClick() {
+    this.template.querySelector('c-p2c-slider').resetSlider();
+  }
 }
